@@ -1,0 +1,10 @@
+<svg width="203" height="203" viewBox="0 0 203 203" fill="none" xmlns="http://www.w3.org/2000/svg"
+    vector-effect="non-scaling-stroke">
+    <path d="M202 135.332L135.333 201.999H202V135.332Z" stroke="#EEEEEE" />
+    <path d="M135.332 135.332L68.6654 201.999H135.332V135.332Z" stroke="#EEEEEE" />
+    <path d="M68.668 135.332L2.00131 201.999H68.668V135.332Z" stroke="#EEEEEE" />
+    <path d="M135.332 68.668L68.6654 135.335H135.332V68.668Z" stroke="#EEEEEE" />
+    <path d="M202 68.668L135.333 135.335H202V68.668Z" stroke="#EEEEEE" />
+    <path d="M202 2L135.333 68.6667H202V2Z" stroke="#EEEEEE" />
+    <circle r="73.3333" transform="matrix(-1 0 0 1 102.003 102.001)" fill="white" stroke="#EEEEEE" />
+</svg>

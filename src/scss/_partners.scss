@@ -1,0 +1,124 @@
+.partners__heading {
+    @include sectionHeading;
+}
+
+.partners__content {
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+}
+
+.partners__top {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        & > span {
+            height: 10rem;
+            &:not(:first-child) {
+                border-left: 1px solid #eeeeee;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        display: block;
+        height: 4rem;
+    }
+}
+
+.partners__list {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        border-top: 1px solid #eeeeee;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    @include breakpoint(mobile) {
+        border-top: 1px solid #eeeeee;
+        border-bottom: 1px solid #eeeeee;
+    }
+}
+
+.partners__list-item {
+    @include breakpointMF(small-tablet) {
+        border-bottom: 1px solid #eeeeee;
+        margin-bottom: -1px;
+        &:not(:nth-child(3n)) {
+            border-right: 1px solid #eeeeee;
+            margin-right: -1px;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        border-bottom: 1px solid #eeeeee;
+        &:last-child {
+            border: none;
+        }
+    }
+}
+
+.partners__card {
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 50%;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            .partners__card-image {
+                filter: grayscale(0%);
+            }
+        }
+    }
+}
+
+.partners__card-image-container {
+    position: absolute;
+    inset: 0;
+}
+
+.partners__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    @include breakpointMF(small-tablet) {
+        filter: grayscale(100%);
+        transition: filter 0.2s;
+    }
+}
+
+.partners__bottom-shape {
+    width: 20rem;
+    height: auto;
+    margin-bottom: -1.5px;
+    margin-left: -1px;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.partners__bottom {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        & > span {
+            &:not(:first-child) {
+                border-left: 1px solid #eeeeee;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        display: block;
+        height: 8rem;
+    }
+}

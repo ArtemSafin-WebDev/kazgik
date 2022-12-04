@@ -1,0 +1,222 @@
+.news {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.news__top-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
+}
+
+.news__heading {
+    @include sectionHeading;
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
+}
+
+.news__link {
+    @include arrowLink;
+    flex-grow: 1;
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+    }
+}
+
+.news__link-wrapper {
+    display: flex;
+    flex-direction: column;
+    @include breakpointMF(small-tablet) {
+        grid-row: 1 / 2;
+        grid-column: 3 / 4;
+    }
+
+    @include breakpoint(mobile) {
+        order: 10;
+
+        &::after {
+            content: '';
+            display: block;
+            height: 10rem;
+            border-left: 1px solid #eeeeee;
+            border-right: 1px solid #eeeeee;
+        }
+    }
+}
+
+.news__content {
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+}
+
+.news__top {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        & > span {
+            height: 10rem;
+            &:not(:first-child) {
+                border-left: 1px solid #eeeeee;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        display: block;
+        height: 4rem;
+    }
+}
+
+.news__bottom {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        & > span {
+            height: 20rem;
+            &:not(:first-child) {
+                border-left: 1px solid #eeeeee;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        display: block;
+        height: 4rem;
+    }
+}
+.news__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.news__list-item {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpointMF(small-tablet) {
+        border-bottom: 1px solid #eeeeee;
+        margin-bottom: -1px;
+        &:not(:nth-child(3n)) {
+            border-right: 1px solid #eeeeee;
+            margin-right: -1px;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        border-bottom: 1px solid #eeeeee;
+        &:last-child {
+            border: none;
+        }
+    }
+}
+
+.news__card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4.2rem;
+
+    @include breakpoint(mobile) {
+        padding: 1.6rem;
+        padding-bottom: 3.4rem;
+    }
+}
+
+.news__card-image-container {
+    position: relative;
+    margin-bottom: 3.2rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.4rem;
+    }
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 75%;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 100%;
+        }
+    }
+}
+
+.news__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news__card-date {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 150%;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 160%;
+        margin-bottom: 1.2rem;
+    }
+}
+
+.news__card-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 150%;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 135%;
+        margin-bottom: 1.2rem;
+    }
+}
+
+.news__card-tag {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 150%;
+    color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 160%;
+    }
+
+    &--orange {
+        color: var(--orange);
+    }
+}

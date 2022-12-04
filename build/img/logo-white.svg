@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="5.18" y="16.46" width="10.36" height="10.36"/>
+  <path class="cls-1" d="M25.89,23.37l3.45,3.45h-3.45v-3.45Z"/>
+  <path class="cls-1" d="M29.35,23.37l3.45,3.45h-3.45v-3.45Z"/>
+  <path class="cls-1" d="M32.8,23.37l3.45,3.45h-3.45v-3.45Z"/>
+  <path class="cls-1" d="M29.35,19.92l3.45,3.45h-3.45v-3.45Z"/>
+  <path class="cls-1" d="M25.89,19.92l3.45,3.45h-3.45v-3.45Z"/>
+  <path class="cls-1" d="M25.89,16.46l3.45,3.45h-3.45v-3.45Z"/>
+  <path class="cls-1" d="M46.61,33.72l3.45,3.45h-3.45v-3.45Z"/>
+  <path class="cls-1" d="M50.06,33.72l3.45,3.45h-3.45v-3.45Z"/>
+  <path class="cls-1" d="M53.51,33.72l3.45,3.45h-3.45v-3.45Z"/>
+  <path class="cls-1" d="M50.06,30.27l3.45,3.45h-3.45v-3.45Z"/>
+  <path class="cls-1" d="M46.61,30.27l3.45,3.45h-3.45v-3.45Z"/>
+  <path class="cls-1" d="M46.61,26.82l3.45,3.45h-3.45v-3.45Z"/>
+  <path class="cls-1" d="M5.18,13.01l3.45,3.45h-3.45v-3.45Z"/>
+  <path class="cls-1" d="M8.63,13.01l3.45,3.45h-3.45v-3.45Z"/>
+  <path class="cls-1" d="M12.09,13.01l3.45,3.45h-3.45v-3.45Z"/>
+  <path class="cls-1" d="M8.63,9.56l3.45,3.45h-3.45v-3.45Z"/>
+  <path class="cls-1" d="M5.18,9.56l3.45,3.45h-3.45v-3.45Z"/>
+  <path class="cls-1" d="M5.18,6.11l3.45,3.45h-3.45v-3.45Z"/>
+  <path class="cls-1" d="M15.54,37.18l10.36-10.36H15.54v10.36Z"/>
+  <path class="cls-1" d="M36.25,47.54l10.36-10.36h-10.36v10.36Z"/>
+  <path class="cls-1" d="M25.89,16.46l-10.36,10.36h10.36v-10.36Z"/>
+  <path class="cls-1" d="M46.61,26.82l-10.36,10.36h10.36v-10.36Z"/>
+  <path class="cls-1" d="M15.54,30.27l-3.45-3.45h3.45v3.45Z"/>
+  <path class="cls-1" d="M12.09,30.27l-3.45-3.45h3.45v3.45Z"/>
+  <path class="cls-1" d="M8.63,30.27l-3.45-3.45h3.45v3.45Z"/>
+  <path class="cls-1" d="M12.09,33.72l-3.45-3.45h3.45v3.45Z"/>
+  <path class="cls-1" d="M15.54,33.72l-3.45-3.45h3.45v3.45Z"/>
+  <path class="cls-1" d="M15.54,37.18l-3.45-3.45h3.45v3.45Z"/>
+  <path class="cls-1" d="M56.96,50.99l-3.45-3.45h3.45v3.45Z"/>
+  <path class="cls-1" d="M53.51,50.99l-3.45-3.45h3.45v3.45Z"/>
+  <path class="cls-1" d="M50.06,50.99l-3.45-3.45h3.45v3.45Z"/>
+  <path class="cls-1" d="M53.51,54.44l-3.45-3.45h3.45v3.45Z"/>
+  <path class="cls-1" d="M56.96,54.44l-3.45-3.45h3.45v3.45Z"/>
+  <path class="cls-1" d="M56.96,57.89l-3.45-3.45h3.45v3.45Z"/>
+  <path class="cls-1" d="M36.25,40.63l-3.45-3.45h3.45v3.45Z"/>
+  <path class="cls-1" d="M32.8,40.63l-3.45-3.45h3.45v3.45Z"/>
+  <path class="cls-1" d="M29.35,40.63l-3.45-3.45h3.45v3.45Z"/>
+  <path class="cls-1" d="M32.8,44.08l-3.45-3.45h3.45v3.45Z"/>
+  <path class="cls-1" d="M36.25,44.08l-3.45-3.45h3.45v3.45Z"/>
+  <path class="cls-1" d="M36.25,47.54l-3.45-3.45h3.45v3.45Z"/>
+  <rect class="cls-1" x="25.89" y="26.82" width="10.36" height="10.36"/>
+  <rect class="cls-1" x="46.61" y="37.18" width="10.36" height="10.36"/>
+  <circle class="cls-1" cx="10.36" cy="11.29" r="3.8"/>
+</svg>
