@@ -10,10 +10,13 @@ import tabs from './tabs';
 import menu from './menu';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import intro from './introSlider';
+import menuAccordions from './menuAccordions';
+import fancybox from './fancybox';
 
 gsap.registerPlugin(ScrollTrigger);
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     detectTouch();
     setScrollbarWidth();
     masks();
@@ -23,13 +26,16 @@ document.addEventListener('DOMContentLoaded', function () {
     modals();
     tabs();
     menu();
+    intro();
+    menuAccordions();
+    fancybox();
 });
 
 document.addEventListener('lazyloaded', () => {
     ScrollTrigger.refresh();
 });
 
-window.addEventListener('load', function () {
+window.addEventListener('load', function() {
     document.body.classList.add('loaded');
     ScrollTrigger.refresh();
     setTimeout(() => document.body.classList.add('animatable'), 300);

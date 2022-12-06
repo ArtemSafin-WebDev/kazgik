@@ -29,6 +29,10 @@ html {
     }
 
     @include breakpoint(mobile) {
+        font-size: 11.5px;
+    }
+
+    @include breakpoint(supersmall-mobile) {
         font-size: 10px;
     }
 

@@ -1,6 +1,123 @@
 {{#extend "layout"}}
     {{#content "main"}}
 
+
+        <section class="intro js-intro">
+            <div class="intro__bg">
+                <div class="intro__bg-slider">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="intro__bg-card">
+                                    <picture>
+                                        <source srcset="img/intro-mobile.jpg" media="(max-width: 640px)" />
+                                        <img src="img/intro.jpg" alt="" class="intro__bg-card-image" />
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="intro__bg-card">
+                                    <picture>
+                                        <source srcset="img/intro-mobile.jpg" media="(max-width: 640px)" />
+                                        <img src="img/intro.jpg" alt="" class="intro__bg-card-image" />
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro__bg-divisions">
+                    <div class="container">
+                        <div class="intro__bg-divisions-rows">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="intro__content">
+                    <div class="intro__main-slider">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="intro__main-slider-card">
+                                        <div class="intro__main-slider-card-text-content">
+                                            <h3 class="intro__main-slider-card-heading">
+                                                <em>Приглашаем на курсы</em> повышения квалификации и профессиональной
+                                                переподготовки
+                                            </h3>
+                                            <div class="intro__main-slider-card-text">
+                                                Ведется набор на образовательные программы «Стратегия создания
+                                                сувенира»,
+                                                «Цифровое проектирование костюма и аксессуаров», «Современные методики
+                                                создания
+                                                экспериментального образца хедожественной керамики» и «Арт-бизнес»
+                                            </div>
+                                        </div>
+                                        <a href="#" class="intro__main-slider-card-link">
+                                            узнать больше
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
+                                                <use xlink:href="#diagonal-arrow"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="intro__main-slider-card">
+                                        <div class="intro__main-slider-card-text-content">
+                                            <h3 class="intro__main-slider-card-heading">
+                                                <em>Приглашаем на курсы</em> повышения квалификации и профессиональной
+                                                переподготовки
+                                            </h3>
+                                            <div class="intro__main-slider-card-text">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dolor
+                                                suscipit iure libero asperiores nostrum sit facilis maiores mollitia
+                                                laboriosam?
+                                            </div>
+                                        </div>
+                                        <a href="#" class="intro__main-slider-card-link">
+                                            узнать больше
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-diagonal-arrow">
+                                                <use xlink:href="#diagonal-arrow"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro__controls">
+
+
+                        <div class="intro__arrows">
+                            <button class="intro__arrow intro__arrow--prev" type="button">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-left">
+                                    <use xlink:href="#arrow-left"></use>
+                                </svg>
+                            </button>
+                            <button class="intro__arrow intro__arrow--next" type="button">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="intro__pagination">
+                            <div class="intro__pagination-current">
+                                01
+                            </div>
+                            <div class="intro__pagination-progress">
+
+                            </div>
+                            <div class="intro__pagination-total">
+                                02
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="about">
             <div class="container">
                 <div class="about__content">
@@ -26,7 +143,8 @@
                                 </p>
                             </div>
                         </div>
-                        <a href="#" class="about__video">
+                        <a href="https://www.youtube.com/watch?v=iftKirX0kD8&ab_channel=PedroTech" class="about__video"
+                            data-fancybox="">
                             <div class="about__video-bg">
                                 <img src="img/about-video.jpg" alt="" class="about__video-bg-image">
 
