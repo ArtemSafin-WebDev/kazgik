@@ -13,6 +13,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import intro from './introSlider';
 import menuAccordions from './menuAccordions';
 import fancybox from './fancybox';
+import social from './social';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     intro();
     menuAccordions();
     fancybox();
+    social();
 });
 
 document.addEventListener('lazyloaded', () => {

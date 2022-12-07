@@ -1,0 +1,77 @@
+.social {
+    position: fixed;
+    z-index: 7;
+    right: 0;
+    bottom: 0;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.social__btn {
+    width: 5rem;
+    height: 5rem;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--orange);
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    color: white;
+    border: 1px solid var(--orange);
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: white;
+        transition: fill 0.2s;
+    }
+
+    .social.active & {
+        border-color: #eeeeee;
+        color: transparent;
+        background-color: white;
+        svg {
+            fill: var(--orange);
+        }
+    }
+}
+
+.social__dropdown {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+    .social.active & {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+}
+
+.social__list-item {
+    margin-top: -1px;
+}
+
+.social__link {
+    border: 1px solid #eeeeee;
+    width: 5rem;
+    height: 5rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    background-color: #fff;
+
+    svg,
+    img {
+        width: 3.2rem;
+        height: 3.2rem;
+        object-fit: contain;
+    }
+}
