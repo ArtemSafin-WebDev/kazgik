@@ -45,114 +45,10 @@
     padding-right: 2.7rem;
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 
-    @include breakpoint(mobile) {
-        min-height: 40rem;
-        padding: 3.2rem 2.4rem;
-
-        .labs__list-item:nth-child(3n + 1) & {
-            background: #007c62;
-            color: white;
-
-            &::before {
-                content: '';
-                position: absolute;
-                right: 0;
-                width: 75%;
-                bottom: 0;
-                z-index: -1;
-                background-image: url('../img/labs-decor-mobile-1.svg');
-                background-repeat: no-repeat;
-                background-position: right bottom;
-                background-size: 100% auto;
-                height: 100%;
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 25%;
-                background-image: url('../img/labs-decor-mobile-1-corner.svg');
-                background-repeat: no-repeat;
-                background-position: right bottom;
-                background-size: 100% auto;
-                height: 100%;
-                z-index: 3;
-                left: -1px;
-            }
-        }
-        .labs__list-item:nth-child(3n + 2) & {
-            background: #f8ae01;
-            color: white;
-
-            &::before {
-                content: '';
-                position: absolute;
-                right: 0;
-                width: 75%;
-                bottom: 0;
-                z-index: -1;
-                background-image: url('../img/labs-decor-mobile-2.svg');
-                background-repeat: no-repeat;
-                background-position: right bottom;
-                background-size: 100% auto;
-                height: 100%;
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 25%;
-                background-image: url('../img/labs-decor-mobile-2-corner.svg');
-                background-repeat: no-repeat;
-                background-position: right bottom;
-                background-size: 100% auto;
-                height: 100%;
-                z-index: 3;
-                left: -1px;
-            }
-        }
-        .labs__list-item:nth-child(3n + 3) & {
-            background: #5fb470;
-            color: white;
-
-            &::before {
-                content: '';
-                position: absolute;
-                right: 0;
-                width: 75%;
-                bottom: 0;
-                z-index: -1;
-                background-image: url('../img/labs-decor-mobile-3.svg');
-                background-repeat: no-repeat;
-                background-position: right bottom;
-                background-size: 100% auto;
-                height: 100%;
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 25%;
-                background-image: url('../img/labs-decor-mobile-1-corner.svg');
-                background-repeat: no-repeat;
-                background-position: right bottom;
-                background-size: 100% auto;
-                height: 100%;
-                z-index: 3;
-                left: -1px;
-            }
-        }
-    }
-
     @include breakpointMF(small-tablet) {
         overflow: hidden;
         border-top: 1px solid #eeeeee;
+
         &::before {
             content: '';
             position: absolute;
@@ -172,7 +68,7 @@
             position: absolute;
             width: 57rem;
             height: 34.2rem;
-            background-image: url('../img/labs-decor-2.svg');
+            background-image: url('../img/labs-decor-4.svg');
             background-size: 100% 100%;
             background-repeat: no-repeat;
             background-position: right bottom;
@@ -183,6 +79,9 @@
             opacity: 0;
         }
 
+        .labs__list-item:first-child & {
+            border: none;
+        }
         .labs__list-item:nth-child(odd) & {
             &::before {
                 right: 0;
@@ -195,27 +94,71 @@
         .labs__list-item:nth-child(even) & {
             &::before {
                 left: 0;
-                transform: scaleX(-1);
+                background-image: url('../img/labs-decor-inverted.svg');
             }
 
             &::after {
                 left: 0;
             }
         }
-
         @media (hover: hover) {
             &:hover {
-                // &::before {
-                //     opacity: 0;
-                // }
-
+                background: #5fb470;
+                color: white;
+                border-color: #5fb470;
                 &::after {
                     opacity: 1;
                 }
             }
         }
+    }
 
-        .labs__list-item:nth-child(3n + 1) & {
+    @include breakpoint(mobile) {
+        min-height: 40rem;
+        padding: 3.2rem 2.4rem;
+        background: #5fb470;
+        color: white;
+
+        &:link,
+        &:visited {
+            color: white;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            width: 75%;
+            bottom: 0;
+            z-index: -1;
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-size: 100% auto;
+            height: 100%;
+            background-image: url('../img/labs-decor-mobile-3.svg');
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 25%;
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-size: 100% auto;
+            height: 100%;
+            z-index: 3;
+            left: -1px;
+            background-image: url('../img/labs-decor-mobile-1-corner.svg');
+        }
+    }
+
+    &--dark-green {
+        @include breakpointMF(small-tablet) {
+            &::after {
+                background-image: url('../img/labs-decor-2.svg');
+            }
             @media (hover: hover) {
                 &:hover {
                     background: #007c62;
@@ -224,7 +167,27 @@
                 }
             }
         }
-        .labs__list-item:nth-child(3n + 2) & {
+
+        @include breakpoint(mobile) {
+            background: #007c62;
+            color: white;
+
+            &:link,
+            &:visited {
+                color: white;
+            }
+            &::before {
+                background-image: url('../img/labs-decor-mobile-1.svg');
+            }
+
+            &::after {
+                background-image: url('../img/labs-decor-mobile-1-corner.svg');
+            }
+        }
+    }
+
+    &--orange {
+        @include breakpointMF(small-tablet) {
             &::after {
                 background-image: url('../img/labs-decor-3.svg');
             }
@@ -236,21 +199,22 @@
                 }
             }
         }
-        .labs__list-item:nth-child(3n + 3) & {
-            &::after {
-                background-image: url('../img/labs-decor-4.svg');
-            }
-            @media (hover: hover) {
-                &:hover {
-                    background: #5fb470;
-                    color: white;
-                    border-color: #5fb470;
-                }
-            }
-        }
+        @include breakpoint(mobile) {
+            background: #f8ae01;
+            color: white;
 
-        .labs__list-item:first-child & {
-            border: none;
+            &:link,
+            &:visited {
+                color: white;
+            }
+
+            &::before {
+                background-image: url('../img/labs-decor-mobile-2.svg');
+            }
+
+            &::after {
+                background-image: url('../img/labs-decor-mobile-2-corner.svg');
+            }
         }
     }
 }
