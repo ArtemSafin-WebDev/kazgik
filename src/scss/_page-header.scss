@@ -2,30 +2,30 @@
     position: relative;
     z-index: 10;
 
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        background-color: #eeeeee;
+        z-index: 80;
+        left: 0;
+        right: 0;
+        height: 1px;
+        transition: opacity 0.2s;
+        // opacity: 0;
+    }
+
     @include breakpoint(mobile) {
         position: fixed;
         left: 0;
         top: 0;
         width: 100%;
 
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            background-color: #eeeeee;
-            z-index: 80;
-            left: 0;
-            right: 0;
-            height: 1px;
-            transition: opacity 0.2s;
-            opacity: 0;
-        }
-
-        .mobile-menu-open & {
-            &::after {
-                opacity: 1;
-            }
-        }
+        // .mobile-menu-open & {
+        //     &::after {
+        //         opacity: 1;
+        //     }
+        // }
     }
 }
 

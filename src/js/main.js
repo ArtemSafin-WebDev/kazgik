@@ -14,6 +14,7 @@ import intro from './introSlider';
 import menuAccordions from './menuAccordions';
 import fancybox from './fancybox';
 import social from './social';
+import equipmentSlider from './equipmentSlider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menuAccordions();
     fancybox();
     social();
+    equipmentSlider();
 });
 
 document.addEventListener('lazyloaded', () => {

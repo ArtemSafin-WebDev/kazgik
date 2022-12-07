@@ -1,0 +1,157 @@
+.lab-intro__card {
+    position: relative;
+    z-index: 1;
+
+    border-bottom: 1px solid #eeeeee;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.lab-intro__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    @include breakpoint(mobile) {
+        position: static;
+        order: 10;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.lab-intro__bg-decor {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: auto;
+
+    @include breakpoint(mobile) {
+        position: static;
+        width: 100%;
+        height: auto;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        justify-self: stretch;
+        align-self: flex-end;
+    }
+}
+
+.lab-intro__bg-image {
+    position: absolute;
+    right: 10rem;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+    max-width: auto;
+    object-fit: contain;
+    object-position: center bottom;
+
+    @include breakpoint(mobile) {
+        position: static;
+        width: 100%;
+        height: auto;
+        justify-self: stretch;
+        align-self: flex-end;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+}
+
+.lab-intro__content {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10rem;
+    padding-top: 3.2rem;
+    min-height: calc(60rem + 2px);
+
+    @include breakpoint(mobile) {
+        min-height: auto;
+        padding-top: 1.6rem;
+        padding-bottom: 0;
+    }
+}
+
+.lab-intro__breadcrumbs {
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.2rem;
+    }
+}
+
+.lab-intro__heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 5.5rem;
+    text-transform: uppercase;
+    margin-bottom: 3.2rem;
+    max-width: 68rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 3.3rem;
+        max-width: none;
+        margin-bottom: 1.6rem;
+    }
+
+    em {
+        font-style: normal;
+        color: var(--primary-color);
+    }
+}
+
+.lab-intro__text-content {
+    margin-top: auto;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        padding-bottom: 2rem;
+    }
+}
+
+.lab-intro__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: #3d3d3d;
+    max-width: 36rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 155%;
+    }
+}
+
+.lab-intro__bottom-rows {
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        & > span {
+            height: 20rem;
+            &:not(:first-child) {
+                border-left: 1px solid #eeeeee;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        display: block;
+        height: 8rem;
+    }
+}

@@ -1,0 +1,170 @@
+.team {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.team__heading {
+    @include sectionHeading;
+}
+
+.team__content {
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+}
+
+.team__top {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        & > span {
+            height: 10rem;
+            &:not(:first-child) {
+                border-left: 1px solid #eeeeee;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        display: block;
+        height: 4rem;
+    }
+}
+
+.team__bottom {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        & > span {
+            height: 20rem;
+            &:not(:first-child) {
+                border-left: 1px solid #eeeeee;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        display: block;
+        height: 8rem;
+    }
+}
+
+.team__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.team__list-item {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpointMF(small-tablet) {
+        border-bottom: 1px solid #eeeeee;
+        margin-bottom: -1px;
+        &:not(:nth-child(3n)) {
+            border-right: 1px solid #eeeeee;
+            margin-right: -1px;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        border-bottom: 1px solid #eeeeee;
+        &:last-child {
+            border: none;
+        }
+    }
+}
+
+.team__card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    padding-bottom: 3.8rem;
+
+    @include breakpoint(mobile) {
+        padding: 1.6rem;
+        padding-bottom: 4rem;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            .team__card-title {
+                color: var(--primary-color);
+            }
+        }
+    }
+}
+
+.team__card-image-container {
+    position: relative;
+    margin-bottom: 1.6rem;
+    background: #f8f8f8;
+    background-image: url('../img/team-no-image.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 5rem 4rem;
+
+    @include breakpoint(mobile) {
+        background-image: url('../img/no-image-mobile.svg');
+        background-size: 8rem 6rem;
+        margin-bottom: 2rem;
+    }
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 130%;
+    }
+}
+
+.team__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team__card-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 135%;
+    margin-bottom: 0.8rem;
+    color: #2e2e2e;
+    transition: color 0.2s;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2.4rem;
+        line-height: 125%;
+        margin-bottom: 1.2rem;
+    }
+}
+
+.team__card-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 150%;
+    color: #3d3d3d;
+    transition: color 0.2s;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 160%;
+    }
+}
