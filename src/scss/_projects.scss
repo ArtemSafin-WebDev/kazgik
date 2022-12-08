@@ -151,6 +151,13 @@
             margin-right: -1px;
         }
     }
+
+    @include breakpoint(mobile) {
+        border-bottom: 1px solid #eeeeee;
+        &:last-child {
+            border: none;
+        }
+    }
 }
 
 .projects__card-image-container {

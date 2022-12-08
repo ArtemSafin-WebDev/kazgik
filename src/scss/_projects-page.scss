@@ -1,0 +1,258 @@
+.projects-page {
+}
+
+.projects-page__top-row {
+    position: relative;
+
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: flex-end;
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #eeeeee;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 10;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        border-left: 1px solid #eeeeee;
+        border-right: 1px solid #eeeeee;
+    }
+}
+
+.projects-page__content {
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+}
+
+.projects-page__heading {
+    padding: 4rem 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 6.4rem;
+    line-height: 8.7rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 1 / 2;
+    }
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 3.3rem;
+        padding: 2.4rem 1.6rem;
+    }
+}
+
+.projects-page__filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 2 / -1;
+        align-self: flex-end;
+        justify-self: flex-start;
+    }
+
+    @include breakpoint(mobile) {
+        flex-wrap: nowrap;
+        margin: 0 -1px;
+    }
+}
+
+.projects-page__filters-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    border: 1px solid #eeeeee;
+    line-height: 135%;
+    padding: 1.4rem 3.35rem;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 135%;
+        padding: 1.4rem 0.5rem;
+        flex-grow: 1;
+        text-align: center;
+        &:not(:first-child) {
+            margin-left: -1px;
+        }
+    }
+    @include breakpointMF(small-tablet) {
+        &:not(:first-child) {
+            margin-left: -1px;
+        }
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            background: #000000;
+            border-color: black;
+            color: white;
+            z-index: 2;
+        }
+    }
+    &.active {
+        background: #000000;
+        border-color: black;
+        color: white;
+        z-index: 3;
+    }
+
+    &--green {
+        color: #5fb470;
+        &:link,
+        &:visited {
+            color: #5fb470;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: #5fb470;
+                border-color: #5fb470;
+                color: white;
+                z-index: 2;
+            }
+        }
+        &.active {
+            background-color: #5fb470;
+            border-color: #5fb470;
+            color: white;
+            z-index: 3;
+        }
+    }
+
+    &--orange {
+        color: var(--orange);
+        &:link,
+        &:visited {
+            color: var(--orange);
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--orange);
+                border-color: var(--orange);
+                color: white;
+                z-index: 2;
+            }
+        }
+
+        &.active {
+            background-color: var(--orange);
+            border-color: var(--orange);
+            color: white;
+            z-index: 3;
+        }
+    }
+
+    &--dark-green {
+        color: var(--primary-color);
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--primary-color);
+                border-color: var(--primary-color);
+                color: white;
+                z-index: 2;
+            }
+        }
+
+        &.active {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+            z-index: 2;
+        }
+    }
+}
+
+.projects-page__top {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        & > span {
+            height: 10rem;
+            &:not(:first-child) {
+                border-left: 1px solid #eeeeee;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        display: block;
+        height: 4rem;
+    }
+}
+
+.projects-page__bottom {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        & > span {
+            min-height: 40rem;
+            display: flex;
+            flex-direction: column;
+            &:not(:first-child) {
+                border-left: 1px solid #eeeeee;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        & > span {
+            display: block;
+            &:nth-child(1) {
+                height: 4rem;
+            }
+
+            &:nth-child(3) {
+                height: 12rem;
+            }
+        }
+    }
+}
+
+.projects-page__load-more {
+    @include arrowLink;
+    margin: 10rem -1px;
+    color: var(--orange);
+
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
+    &:link,
+    &:visited {
+        color: var(--orange);
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: var(--orange);
+            color: white;
+        }
+    }
+}
