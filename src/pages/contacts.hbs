@@ -1,0 +1,60 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="contacts-page">
+            <div class="container">
+                <div class="breadcrumbs contacts-page__breadcrumbs">
+                    <a href="#">Главная</a> / <a href="#" class="active">Изготовление прототипа</a>
+                </div>
+                <div class="contacts-page__top-row">
+                    <h1 class="contacts-page__heading">
+                        Контакты
+                    </h1>
+                    <picture>
+                        <source srcset="img/long-decor-mobile.svg" media="(max-width: 640px)" />
+                        <img src="img/long-decor.svg" alt="" class="contacts-page__decor" />
+                    </picture>
+                </div>
+                <div class="contacts-page__bottom-row">
+                    <div class="contacts-page__left-col">
+                        <div class="contacts-page__address">
+                            Казань, ул. Спартаковская, д. 2
+                        </div>
+                        <a href="tel:+79274231774" class="contacts-page__phone">+7 (927) 423-17-74</a>
+                        <a href="mailto:email@email.com" class="contacts-page__email">email@email.com</a>
+                        <ul class="contacts-page__social-list">
+                            <li class="contacts-page__social-list-item">
+                                <a href="#" class="contacts-page__social-link">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-telegram">
+                                        <use xlink:href="#telegram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="contacts-page__social-list-item">
+                                <a href="#" class="contacts-page__social-link">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-vk">
+                                        <use xlink:href="#vk"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contacts-page__right-col">
+                        <div class="contacts-page__map-wrapper">
+                            <div class="contacts-page__map-container js-map" data-coords="55.779474, 49.128126"
+                                data-center="55.779474, 49.128126" data-zoom="12">
+                                <div class="contacts-page__map-element js-map-element"></div>
+                            </div>
+                        </div>
+                        <div class="contacts-page__bottom">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    {{/content}}
+{{/extend}}

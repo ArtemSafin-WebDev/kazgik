@@ -1,4 +1,5 @@
 import { Swiper, Navigation, EffectFade, Controller, Pagination } from 'swiper';
+import { IS_MOBILE } from './utils';
 
 Swiper.use([Navigation, EffectFade, Controller, Pagination]);
 
@@ -16,7 +17,7 @@ export default function intro() {
         const mainSlider = new Swiper(mainContainer, {
             effect: 'fade',
             speed: 400,
-            autoHeight: true,
+            autoHeight: IS_MOBILE ? true : false,
             longSwipesRatio: 0.1,
             loop: true,
             fadeEffect: {

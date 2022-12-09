@@ -73,8 +73,16 @@
     justify-content: center;
     border: 1px solid currentColor;
     padding: 1.6rem 4.2rem;
-    transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
     align-self: flex-start;
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: white;
+            border-color: white;
+            color: var(--primary-color);
+        }
+    }
 
     @include breakpoint(mobile) {
         align-self: stretch;
