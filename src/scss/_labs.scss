@@ -29,6 +29,77 @@
 .labs__list {
     border-top: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
+
+    &--three-compact {
+        @include breakpointMF(small-tablet) {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+
+            .labs__card-link {
+                display: none;
+            }
+
+            .labs__card {
+                min-height: 50rem;
+                padding: 3rem;
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+                border: none;
+                overflow: hidden;
+                @media (hover: hover) {
+                    &:hover {
+                        .labs__card-title-large-text {
+                            color: white;
+                        }
+                        &::before,
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            .labs__card-title {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 2.4rem;
+                line-height: 135%;
+                margin: 0;
+                margin-bottom: auto;
+                text-align: left !important;
+            }
+
+            .labs__card-title-large-text {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 2.7rem;
+                transition: color 0.2s !important;
+                line-height: 135%;
+                color: #5fb470;
+            }
+
+            .labs__card--dark-green .labs__card-title-large-text {
+                color: #007c62;
+            }
+            .labs__card--orange .labs__card-title-large-text {
+                color: #f8ae01;
+            }
+
+            .labs__list-item {
+                &:not(:nth-child(3n + 1)) {
+                    border-left: 1px solid #eeeeee;
+                }
+            }
+
+            .labs__card-image {
+                left: 0 !important;
+                width: 100% !important;
+                transform: none !important;
+                height: auto !important;
+                bottom: 0 !important;
+            }
+        }
+    }
 }
 
 .labs__list-item {
@@ -108,6 +179,63 @@
                 border-color: #5fb470;
                 &::after {
                     opacity: 1;
+                }
+            }
+        }
+
+        .labs__list--three-compact & {
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0 !important;
+                left: auto !important;
+                width: 75%;
+                bottom: 0;
+                z-index: -1;
+                background-repeat: no-repeat;
+                background-position: right bottom;
+                background-size: 100% auto;
+                height: 100%;
+                background-image: url('../img/labs-decor-mobile-3.svg') !important;
+                opacity: 0;
+                transition: opacity 0.2s;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: -1px !important;
+                right: auto !important;
+                bottom: 0;
+                width: 25%;
+                background-repeat: no-repeat;
+                background-position: right bottom;
+                background-size: 100% auto;
+                height: 100%;
+                z-index: 3;
+                left: -1px;
+                background-image: url('../img/labs-decor-mobile-1-corner.svg') !important;
+                opacity: 0;
+                transition: opacity 0.2s;
+            }
+
+            &--dark-green {
+                &::before {
+                    background-image: url('../img/labs-decor-mobile-1.svg') !important;
+                }
+
+                &::after {
+                    background-image: url('../img/labs-decor-mobile-1-corner.svg') !important;
+                }
+            }
+
+            &--orange {
+                &::before {
+                    background-image: url('../img/labs-decor-mobile-2.svg') !important;
+                }
+
+                &::after {
+                    background-image: url('../img/labs-decor-mobile-2-corner.svg') !important;
                 }
             }
         }
@@ -224,6 +352,9 @@
     width: auto;
     position: absolute;
     bottom: 0;
+    object-fit: contain;
+    object-position: center bottom;
+    z-index: -1;
 
     @include breakpoint(mobile) {
         left: 0;

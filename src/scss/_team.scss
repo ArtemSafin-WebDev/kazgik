@@ -58,6 +58,16 @@
     border-top: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
 
+    .team__tabs-item & {
+        border-bottom: none;
+    }
+
+    @include breakpointMF(small-tablet) {
+        &--two-col {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
     @include breakpoint(mobile) {
         display: flex;
         flex-direction: column;
@@ -69,11 +79,22 @@
     flex-direction: column;
 
     @include breakpointMF(small-tablet) {
-        border-bottom: 1px solid #eeeeee;
-        margin-bottom: -1px;
-        &:not(:nth-child(3n)) {
-            border-right: 1px solid #eeeeee;
-            margin-right: -1px;
+        .team__list:not(.team__list--two-col) & {
+            border-bottom: 1px solid #eeeeee;
+            margin-bottom: -1px;
+            &:not(:nth-child(3n)) {
+                border-right: 1px solid #eeeeee;
+                margin-right: -1px;
+            }
+        }
+
+        .team__list--two-col & {
+            border-bottom: 1px solid #eeeeee;
+            margin-bottom: -1px;
+            &:not(:nth-child(2n)) {
+                border-right: 1px solid #eeeeee;
+                margin-right: -1px;
+            }
         }
     }
 
@@ -109,14 +130,14 @@
     position: relative;
     margin-bottom: 1.6rem;
     background: #f8f8f8;
-    background-image: url('../img/team-no-image.svg');
+    background-image: url('../img/no-image-mobile.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 5rem 4rem;
+    background-size: 8rem auto;
 
     @include breakpoint(mobile) {
         background-image: url('../img/no-image-mobile.svg');
-        background-size: 8rem 6rem;
+        background-size: 8rem auto;
         margin-bottom: 2rem;
     }
     &::before {
@@ -166,5 +187,215 @@
         font-weight: 400;
         font-size: 1.2rem;
         line-height: 160%;
+    }
+}
+
+.team__top-special {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        & > span {
+            height: 10rem;
+            &:not(:first-child) {
+                border-left: 1px solid #eeeeee;
+                // border-bottom: 1px solid #eeeeee;
+            }
+        }
+    }
+}
+
+.team__row {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.team__left-col {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpointMF(small-tablet) {
+        grid-column: 1 / 2;
+        padding: 0 3.2rem;
+    }
+}
+
+.team__right-col {
+    @include breakpointMF(small-tablet) {
+        grid-column: 2 / -1;
+        border-left: 1px solid #eeeeee;
+    }
+}
+
+.team__management-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 135%;
+    color: #007c62;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 135%;
+        padding: 1.6rem;
+        padding-top: 3.2rem;
+        padding-bottom: 2.4rem;
+    }
+}
+
+.team__middle-special {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        & > span {
+            height: 10rem;
+            &:not(:first-child) {
+                border-left: 1px solid #eeeeee;
+                // border-bottom: 1px solid #eeeeee;
+            }
+        }
+    }
+}
+
+.team__selector {
+    @include breakpoint(mobile) {
+        position: relative;
+    }
+}
+
+.team__selector-btn {
+    @include breakpointMF(small-tablet) {
+        display: none;
+    }
+
+    @include breakpoint(mobile) {
+        display: flex;
+        align-items: center;
+        padding: 1.2rem 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 135%;
+        color: var(--primary-color);
+        gap: 2.4rem;
+        text-align: left;
+
+        svg {
+            flex-shrink: 0;
+            width: 2.4rem;
+            height: 2.4rem;
+            flex-shrink: 0;
+            transition: transform 0.2s;
+            fill: currentColor;
+        }
+
+        &.active {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.team__selector-list {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpointMF(small-tablet) {
+        align-items: flex-start;
+        gap: 3.2rem;
+    }
+}
+
+.team__selector-list-item {
+    @include breakpoint(mobile) {
+        border-top: 1px solid #eeeeee;
+        &:first-child {
+            border-top: none;
+        }
+    }
+}
+
+.team__selector-link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 135%;
+    color: #969696;
+    display: block;
+
+    &:link,
+    &:visited {
+        color: #969696;
+    }
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 155%;
+        padding: 1.2rem 1.6rem;
+        color: #3d3d3d;
+        &:link,
+        &:visited {
+            color: #3d3d3d;
+        }
+    }
+
+    &.active {
+        color: var(--primary-color);
+
+        @include breakpoint(mobile) {
+            font-weight: 500;
+        }
+    }
+}
+
+.team__tabs {
+    position: relative;
+}
+
+.team__tabs-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+    z-index: 5;
+
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.4s, visibility 0.4s;
+        z-index: 10;
+        position: relative;
+    }
+}
+
+.team__selector-dropdown {
+    @include breakpoint(mobile) {
+        position: absolute;
+        left: -1px;
+        top: 100%;
+        right: -1px;
+        z-index: 50;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s, visibility 0s linear 0.4s;
+        background-color: #fff;
+        border: 1px solid #eeeeee;
+        &.active {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity 0.4s, visibility 0.4s;
+        }
     }
 }

@@ -16,6 +16,9 @@ import fancybox from './fancybox';
 import social from './social';
 import equipmentSlider from './equipmentSlider';
 import maps from './maps';
+import aboutIntro from './aboutIntro';
+import awardsSlider from './awardsSlider';
+import teamSelector from './teamSelector';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,6 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
     social();
     equipmentSlider();
     maps();
+    aboutIntro();
+    awardsSlider();
+    teamSelector();
 });
 
 document.addEventListener('lazyloaded', () => {

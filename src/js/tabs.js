@@ -11,7 +11,7 @@ export default function tabs() {
         const btns = Array.from(element.querySelectorAll('.js-tabs-btn'));
         const items = Array.from(element.querySelectorAll('.js-tabs-item'));
 
-        const setActiveTab = index => {
+        const setActiveTab = (index, initial = false) => {
             const state = Flip.getState(items[0].parentElement);
             btns.forEach(btn => btn.classList.remove('active'));
             items.forEach(item => item.classList.remove('active'));
@@ -19,17 +19,27 @@ export default function tabs() {
             btns[index].classList.add('active');
             items[index].classList.add('active');
 
-            Flip.from(state, {
-                ease: 'power1.inOut',
-                duration: 0.4,
-                onComplete: () => {
-                    ScrollTrigger.refresh();
-                }
-            });
+            if (!initial) {
+                Flip.from(state, {
+                    ease: 'power1.inOut',
+                    duration: 0.4,
+                    onComplete: () => {
+                        ScrollTrigger.refresh();
+                    }
+                });
+            } else {
+                ScrollTrigger.refresh();
+            }
         };
 
+        const activeIndex = items.findIndex(item => item.classList.contains('active'));
+
         if (items.length) {
-            setActiveTab(0);
+            if (activeIndex !== -1) {
+                setActiveTab(activeIndex, true);
+            } else {
+                setActiveTab(0, true);
+            }
         }
 
         btns.forEach((btn, btnIndex) => {
