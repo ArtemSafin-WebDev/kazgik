@@ -19,6 +19,7 @@ import maps from './maps';
 import aboutIntro from './aboutIntro';
 import awardsSlider from './awardsSlider';
 import teamSelector from './teamSelector';
+import gallerySlider from './gallerySlider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     aboutIntro();
     awardsSlider();
     teamSelector();
+    gallerySlider();
 });
 
 document.addEventListener('lazyloaded', () => {

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 801.71 602.41">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #eee;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" x="1.21" y="201.21" width="200" height="200"/>
+  <path class="cls-2" d="M401.21,334.54l66.67,66.67h-66.67v-66.67Z"/>
+  <path class="cls-2" d="M467.87,334.54l66.67,66.67h-66.67v-66.67Z"/>
+  <path class="cls-2" d="M534.54,334.54l66.67,66.67h-66.67v-66.67Z"/>
+  <path class="cls-2" d="M467.87,267.87l66.67,66.67h-66.67v-66.67Z"/>
+  <path class="cls-2" d="M401.21,267.87l66.67,66.67h-66.67v-66.67Z"/>
+  <path class="cls-2" d="M401.21,201.21l66.67,66.67h-66.67v-66.67Z"/>
+  <path class="cls-2" d="M1.21,134.54l66.67,66.67H1.21v-66.67Z"/>
+  <path class="cls-2" d="M67.87,134.54l66.67,66.67H67.87v-66.67Z"/>
+  <path class="cls-2" d="M134.54,134.54l66.67,66.67h-66.67v-66.67Z"/>
+  <path class="cls-2" d="M67.87,67.87l66.67,66.67H67.87V67.87Z"/>
+  <path class="cls-2" d="M1.21,67.87l66.67,66.67H1.21V67.87Z"/>
+  <path class="cls-2" d="M1.21,1.21L67.87,67.87H1.21V1.21Z"/>
+  <path class="cls-2" d="M201.21,601.21l200-200H201.21v200Z"/>
+  <path class="cls-2" d="M401.21,201.21l-200,200h200V201.21Z"/>
+  <path class="cls-2" d="M801.21,401.21l-200,200h200v-200Z"/>
+  <path class="cls-2" d="M201.21,467.87l-66.67-66.67h66.67v66.67Z"/>
+  <path class="cls-2" d="M134.54,467.87l-66.67-66.67h66.67v66.67Z"/>
+  <path class="cls-2" d="M67.87,467.87L1.21,401.21H67.87v66.67Z"/>
+  <path class="cls-2" d="M134.54,534.54l-66.67-66.67h66.67v66.67Z"/>
+  <path class="cls-2" d="M201.21,534.54l-66.67-66.67h66.67v66.67Z"/>
+  <path class="cls-2" d="M201.21,601.21l-66.67-66.67h66.67v66.67Z"/>
+  <rect class="cls-2" x="401.21" y="401.21" width="200" height="200"/>
+  <circle class="cls-1" cx="101.21" cy="101.21" r="73.33"/>
+</svg>

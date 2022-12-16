@@ -1,0 +1,208 @@
+.gallery-slider {
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+
+    @include breakpoint(mobile) {
+        border-bottom: none;
+    }
+}
+
+.gallery-slider__main {
+    padding: 2rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
+}
+.gallery-slider__main-inner {
+    position: relative;
+}
+
+.gallery-slider__main-card {
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 56.25%;
+    }
+}
+
+.gallery-slider__main-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-slider__panel {
+    position: absolute;
+    z-index: 20;
+    background: #ffffff;
+    display: flex;
+
+    right: 0;
+    bottom: 0;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.gallery-slider__panel-tabs {
+    position: relative;
+}
+
+.gallery-slider__panel-tab {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2.4rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 135%;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0s linear 0.2s;
+    // min-width: 48rem;
+    min-width: 48rem;
+    border: 1px solid #eeeeee;
+    border-right: none;
+    background: #ffffff;
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.2s, visibility 0.2s;
+        position: relative;
+        z-index: 10;
+    }
+}
+
+.gallery-slider__arrows {
+    display: flex;
+    align-items: center;
+}
+
+.gallery-slider__arrow {
+    width: 5rem;
+    height: 5rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eeeeee;
+    flex-shrink: 0;
+    transition: background-color 0.2s, border-color 0.2s;
+    &:nth-child(2) {
+        margin-left: -1px;
+    }
+
+    svg {
+        fill: var(--orange);
+        width: 1.8rem;
+        height: 1.8rem;
+        transition: fill 0.2s, fill-opacity 0.2s;
+    }
+
+    &.swiper-button-disabled {
+        cursor: default;
+        svg {
+            fill-opacity: 0.5;
+        }
+    }
+
+    &:not(.swiper-button-disabled) {
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--orange);
+                border-color: var(--orange);
+                svg {
+                    fill: white;
+                }
+            }
+        }
+    }
+}
+
+.gallery-slider__thumbs {
+    @include breakpointMF(small-tablet) {
+        border-top: 1px solid #eeeeee;
+    }
+
+    @include breakpoint(mobile) {
+        // margin-top: -1px;
+    }
+
+    .swiper-slide {
+        border-right: 1px solid #eeeeee;
+        width: 20%;
+    }
+
+    .swiper {
+        width: auto;
+        margin-right: -1px;
+    }
+
+    @include breakpoint(mobile) {
+        margin-right: calc((100vw - 100%) / 2 * -1);
+        margin-left: calc((100vw - 100%) / 2 * -1);
+        padding: 0 calc((100vw - 100%) / 2);
+
+        .swiper {
+            overflow: visible;
+            margin: 0;
+        }
+
+        .swiper-slide {
+            width: 25%;
+            border: none;
+        }
+    }
+}
+
+.gallery-slider__thumbs-card {
+    padding: 1rem;
+    transition: background-color 0.2s, border-color 0.2s;
+    cursor: pointer;
+    @include breakpoint(mobile) {
+        padding: 0.4rem;
+        border: 1px solid #eeeeee;
+        border-left-width: 0.5px;
+        border-right-width: 0.5px;
+    }
+    &.thumb-active {
+        background-color: var(--primary-color);
+
+        @include breakpoint(mobile) {
+            border-color: var(--primary-color);
+        }
+    }
+}
+
+.gallery-slider__thumbs-card-image-wrapper {
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 56.25%;
+    }
+}
+
+.gallery-slider__thumbs-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
