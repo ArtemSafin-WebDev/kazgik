@@ -346,6 +346,7 @@
 
     @include breakpoint(mobile) {
         grid-template-columns: minmax(0, 1fr);
+        border-top: 1px solid #eeeeee;
     }
 }
 
@@ -365,7 +366,7 @@
     display: flex;
     flex-direction: column;
     padding: 4rem 2rem;
-
+    flex-grow: 1;
     @include breakpoint(mobile) {
         padding: 1.6rem;
         padding-bottom: 3.2rem;
@@ -411,7 +412,7 @@
 .services-page__card-title {
     font-style: normal;
     font-weight: 600;
-    font-size: 2.4rem;
+    font-size: 2.38rem;
     line-height: 135%;
     margin-top: 1.6rem;
     color: black;
@@ -468,16 +469,34 @@
     text-align: center;
     letter-spacing: 0.02em;
     display: block;
-    padding: 1.6rem 3.2rem;
+    padding: 1.6rem 1.6rem;
     border: 1px solid #eeeeee;
     margin-top: auto;
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-
+    cursor: pointer;
     @media (hover: hover) {
         &:hover {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
             color: white;
+        }
+    }
+
+    &--filled {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        color: white;
+
+        &:link,
+        &:visited {
+            color: white;
+        }
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--orange);
+                border-color: var(--orange);
+                color: white;
+            }
         }
     }
 
@@ -508,5 +527,41 @@
     @include breakpoint(mobile) {
         border-top: 1px solid #eeeeee;
         height: 9.2rem;
+    }
+}
+
+.services-page__card-conditions {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: #2e2e2e;
+    margin-top: 1.6rem;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-top: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 155%;
+    }
+}
+
+.services-page__card-btns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 0.5rem;
+    margin-top: auto;
+
+    .services-page__card-link {
+        margin: 0;
+    }
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        margin-top: 2.4rem;
+        grid-gap: 0.5rem;
     }
 }
