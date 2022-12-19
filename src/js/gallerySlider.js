@@ -11,12 +11,13 @@ export default function gallerySlider() {
         const thumbsContainer = element.querySelector('.gallery-slider__thumbs .swiper');
         const thumbsCards = Array.from(element.querySelectorAll(CARD_SELECTOR));
         const tabs = Array.from(element.querySelectorAll('.gallery-slider__panel-tab'));
+        const fourThumbs = element.matches('.js-gallery-slider-4-thumbs');
 
         const thumbsInstance = new Swiper(thumbsContainer, {
             watchOverflow: true,
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
-            slidesPerView: IS_MOBILE ? 4 : 5,
+            slidesPerView: IS_MOBILE || fourThumbs ? 4 : 5,
             threshold: 10,
             speed: 700,
             slideToClickedSlide: true,

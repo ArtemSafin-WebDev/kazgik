@@ -10,6 +10,12 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     border-top: 1px solid #eeeeee;
+
+    @include breakpointMF(small-tablet) {
+        &--diploma {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
     @include breakpoint(mobile) {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -23,6 +29,16 @@
         &:nth-child(2) {
             border-left: 1px solid #eeeeee;
         }
+
+        .contacts__row--diploma & {
+            &:nth-child(1) {
+                grid-column: 1 / 2;
+            }
+
+            &:nth-child(2) {
+                grid-column: 2 / -1;
+            }
+        }
     }
 
     @include breakpoint(mobile) {
@@ -30,6 +46,63 @@
             border-top: 1px solid #eeeeee;
         }
     }
+}
+
+.contacts__diploma {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    flex-grow: 1;
+    color: white;
+}
+
+.contacts__diploma-text-content {
+    padding: 0 4rem;
+    padding-top: 10rem;
+    padding-bottom: 5.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include breakpoint(mobile) {
+        gap: 1.6rem;
+        padding: 4rem 1.6rem;
+    }
+}
+
+.contacts__diploma-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 150%;
+    text-transform: uppercase;
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 3.3rem;
+        text-transform: uppercase;
+    }
+}
+
+.contacts__diploma-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 150%;
+    }
+}
+
+.contacts__diploma-decor {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .contacts__text-content {
@@ -200,8 +273,12 @@
 .contacts__form-wrapper {
     padding: 6rem;
     padding-top: 9rem;
-    padding-bottom: 6rem;
-
+    padding-bottom: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
     @include breakpoint(mobile) {
         padding: 1.6rem;
         padding-top: 4rem;
@@ -226,6 +303,15 @@
 }
 
 .contacts__form {
+    width: 100%;
+
+    @include breakpointMF(small-tablet) {
+        &--fixed-width {
+            max-width: 40rem;
+            margin: 0 auto;
+        }
+    }
+
     .parsley-errors-list.filled {
         padding: 0 1.6rem;
         font-style: normal;
@@ -339,4 +425,32 @@ textarea.contacts__form-input ~ .contacts__form-input-placeholder {
     text-transform: uppercase;
     color: white;
     background-color: var(--primary-color);
+}
+
+.contacts__diploma-bottom {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        border-top: 1px solid #eeeeee;
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            height: 20rem;
+        }
+
+        &::before {
+            grid-column: 1 / 2;
+        }
+
+        &::after {
+            border-left: 1px solid #eeeeee;
+            grid-column: 2 / 3;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        height: 8rem;
+        border-top: 1px solid #eeeeee;
+    }
 }
