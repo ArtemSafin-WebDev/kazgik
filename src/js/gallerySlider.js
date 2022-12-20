@@ -11,13 +11,20 @@ export default function gallerySlider() {
         const thumbsContainer = element.querySelector('.gallery-slider__thumbs .swiper');
         const thumbsCards = Array.from(element.querySelectorAll(CARD_SELECTOR));
         const tabs = Array.from(element.querySelectorAll('.gallery-slider__panel-tab'));
-        const fourThumbs = element.matches('.js-gallery-slider-4-thumbs');
+
+        let desktopThumbsAmount = 5;
+        if (element.matches('.js-gallery-slider-4-thumbs')) {
+            desktopThumbsAmount = 4;
+        }
+        if (element.matches('.js-gallery-slider-6-thumbs')) {
+            desktopThumbsAmount = 6;
+        }
 
         const thumbsInstance = new Swiper(thumbsContainer, {
             watchOverflow: true,
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
-            slidesPerView: IS_MOBILE || fourThumbs ? 4 : 5,
+            slidesPerView: IS_MOBILE ? 4 : desktopThumbsAmount,
             threshold: 10,
             speed: 700,
             slideToClickedSlide: true,
@@ -29,8 +36,10 @@ export default function gallerySlider() {
             thumbsInstance.slideTo(swiper.activeIndex);
             thumbsCards.forEach(card => card.classList.remove('thumb-active'));
             thumbsCards[swiper.activeIndex]?.classList.add('thumb-active');
-            tabs.forEach(tab => tab.classList.remove('active'));
-            tabs[swiper.activeIndex].classList.add('active');
+            if (tabs.length) {
+                tabs.forEach(tab => tab.classList.remove('active'));
+                tabs[swiper.activeIndex].classList.add('active');
+            }
         }
 
         const mainInstance = new Swiper(mainContainer, {

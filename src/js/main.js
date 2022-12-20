@@ -21,6 +21,7 @@ import awardsSlider from './awardsSlider';
 import teamSelector from './teamSelector';
 import gallerySlider from './gallerySlider';
 import servicesMobileNav from './servicesMobileNav';
+import protoSelector from './protoSelector';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     teamSelector();
     gallerySlider();
     servicesMobileNav();
+    protoSelector();
 });
 
 document.addEventListener('lazyloaded', () => {
