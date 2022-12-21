@@ -1,0 +1,166 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="search">
+            <div class="container">
+                <div class="breadcrumbs search__breadcrumbs">
+                    <a href="#">Главная</a> / <a href="#" class="active">Поиск</a>
+                </div>
+                <div class="search__top-row">
+                    <h1 class="search__main-heading">
+                        Поиск по сайту
+                    </h1>
+                    <picture>
+                        <source srcset="img/project-decor-mobile.svg" media="(max-width: 640px)" />
+                        <img src="img/news-detail-decor.svg" alt="" class="search__decor" />
+                    </picture>
+                </div>
+                <div class="search__content">
+                    <form action="/" method="GET" class="search__form">
+                        <div class="search__form-input-wrapper">
+                            <input type="search" name="q" class="search__form-input" placeholder="Поиск по сайту">
+                            <button class="search__form-submit" type="submit">
+                                Искать
+                            </button>
+                        </div>
+                        <div class="search__form-filters">
+                            <div class="search__form-filters-date js-date">
+                                <div class="search__form-filters-date-item">
+                                    <label for="from" class="search__form-filters-date-item-label">
+                                        <span class="hide-on-mobile">Искать</span> с:
+                                    </label>
+                                    <div class="search__form-filters-date-input-wrapper" id="from-wrapper">
+                                        <input type="text" class="search__form-filters-date-input" value="01.01.2022"
+                                            id="from" readonly="">
+                                    </div>
+                                </div>
+                                <div class="search__form-filters-date-item">
+                                    <label for="to" class="search__form-filters-date-item-label">
+                                        по:
+                                    </label>
+                                    <div class="search__form-filters-date-input-wrapper" id="to-wrapper">
+                                        <input type="text" class="search__form-filters-date-input" value="02.01.2022"
+                                            id="to" readonly="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search__form-filters-reset">
+                                <button class="search__form-filters-reset-btn" type="reset">
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-reset">
+                                        <use xlink:href="#reset"></use>
+                                    </svg>
+                                    Сбросить фильтр
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <h2 class="search__results-heading">
+                        Результаты поиска
+                    </h2>
+                    <ul class="search__list">
+                        <li class="search__list-item">
+                            <a href="#" class="search__card">
+                                <div class="search__card-date">
+                                    29.06.2022
+                                </div>
+                                <h3 class="search__card-title">
+                                    Итоги хакатона «Цифровая “Арт-терапия”»
+                                </h3>
+                                <div class="search__card-text">
+                                    ... заявок. 3 команды из Казанского государственного института культуры, 4 команды
+                                    от Москвы, Дагестана, Иннополиса, КФУ, 1 команда из Нижнекамска представители СПО, 4
+                                    команды от общеобразовательных учреждений г.Казани и Бугульмы. 17 сентября участники
+                                    конкурса приступили к заключительному этапу работы над проектом. Им предстояло
+                                    творчески подойти к финалу конкурса — защите своего "детища". Готовясь к этому, они
+                                    решили потренироваться, давая комментарий. – «Приехали попробовать свои силы....
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__list-item">
+                            <a href="#" class="search__card">
+                                <div class="search__card-date">
+                                    29.06.2022
+                                </div>
+                                <h3 class="search__card-title">
+                                    Итоги хакатона «Цифровая “Арт-терапия”»
+                                </h3>
+                                <div class="search__card-text">
+                                    ... заявок. 3 команды из Казанского государственного института культуры, 4 команды
+                                    от Москвы, Дагестана, Иннополиса, КФУ, 1 команда из Нижнекамска представители СПО, 4
+                                    команды от общеобразовательных учреждений г.Казани и Бугульмы. 17 сентября участники
+                                    конкурса приступили к заключительному этапу работы над проектом. Им предстояло
+                                    творчески подойти к финалу конкурса — защите своего "детища". Готовясь к этому, они
+                                    решили потренироваться, давая комментарий. – «Приехали попробовать свои силы....
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__list-item">
+                            <a href="#" class="search__card">
+                                <div class="search__card-date">
+                                    29.06.2022
+                                </div>
+                                <h3 class="search__card-title">
+                                    Итоги хакатона «Цифровая “Арт-терапия”»
+                                </h3>
+                                <div class="search__card-text">
+                                    ... заявок. 3 команды из Казанского государственного института культуры, 4 команды
+                                    от Москвы, Дагестана, Иннополиса, КФУ, 1 команда из Нижнекамска представители СПО, 4
+                                    команды от общеобразовательных учреждений г.Казани и Бугульмы. 17 сентября участники
+                                    конкурса приступили к заключительному этапу работы над проектом. Им предстояло
+                                    творчески подойти к финалу конкурса — защите своего "детища". Готовясь к этому, они
+                                    решили потренироваться, давая комментарий. – «Приехали попробовать свои силы....
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__list-item">
+                            <a href="#" class="search__card">
+                                <div class="search__card-date">
+                                    29.06.2022
+                                </div>
+                                <h3 class="search__card-title">
+                                    Итоги хакатона «Цифровая “Арт-терапия”»
+                                </h3>
+                                <div class="search__card-text">
+                                    ... заявок. 3 команды из Казанского государственного института культуры, 4 команды
+                                    от Москвы, Дагестана, Иннополиса, КФУ, 1 команда из Нижнекамска представители СПО, 4
+                                    команды от общеобразовательных учреждений г.Казани и Бугульмы. 17 сентября участники
+                                    конкурса приступили к заключительному этапу работы над проектом. Им предстояло
+                                    творчески подойти к финалу конкурса — защите своего "детища". Готовясь к этому, они
+                                    решили потренироваться, давая комментарий. – «Приехали попробовать свои силы....
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__list-item">
+                            <a href="#" class="search__card">
+                                <div class="search__card-date">
+                                    29.06.2022
+                                </div>
+                                <h3 class="search__card-title">
+                                    Итоги хакатона «Цифровая “Арт-терапия”»
+                                </h3>
+                                <div class="search__card-text">
+                                    ... заявок. 3 команды из Казанского государственного института культуры, 4 команды
+                                    от Москвы, Дагестана, Иннополиса, КФУ, 1 команда из Нижнекамска представители СПО, 4
+                                    команды от общеобразовательных учреждений г.Казани и Бугульмы. 17 сентября участники
+                                    конкурса приступили к заключительному этапу работы над проектом. Им предстояло
+                                    творчески подойти к финалу конкурса — защите своего "детища". Готовясь к этому, они
+                                    решили потренироваться, давая комментарий. – «Приехали попробовать свои силы....
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="search__bottom">
+                        <span></span>
+                        <span>
+                            <a href="#" class="search__load-more">
+                                загрузить ещё
+                            </a>
+                        </span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}
