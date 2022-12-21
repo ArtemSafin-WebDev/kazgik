@@ -97,6 +97,7 @@
                 transform: none !important;
                 height: auto !important;
                 bottom: 0 !important;
+                z-index: -1;
             }
         }
     }
@@ -354,7 +355,6 @@
     bottom: 0;
     object-fit: contain;
     object-position: center bottom;
-    z-index: -1;
 
     @include breakpoint(mobile) {
         left: 0;

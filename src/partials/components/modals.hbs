@@ -1,0 +1,69 @@
+<div class="modal js-modal" id="callback-modal">
+    <div class="modal__inner">
+        <button class="modal__close js-close-modal">
+            <svg width="14" height="14" aria-hidden="true" class="icon-modal-close">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <div class="modal__left-col">
+            <div class="modal__text-content">
+                <h3 class="modal__heading">
+                    Оставьте заявку
+                </h3>
+                <div class="modal__text">
+                    <p>
+                        Специалисты инжинирингового центра свяжутся с вами
+                        в ближайшее время!
+                    </p>
+                </div>
+            </div>
+            <img src="img/diploma-decor.svg" alt="" class="modal__image">
+        </div>
+        <div class="modal__right-col">
+            <form action="/" method="POST" class="modal__form" data-need-validation="">
+                <h4 class="modal__form-heading">
+                    Форма обратной связи
+                </h4>
+                <div class="modal__form-fields">
+                    <div class="modal__form-field">
+                        <label class="modal__form-input-label">
+                            <input type="text" class="modal__form-input" name="name" required="" placeholder="Имя">
+                            <span class="modal__form-input-placeholder">
+                                Имя
+                            </span>
+                        </label>
+                    </div>
+                    <div class="modal__form-field">
+                        <label class="modal__form-input-label">
+                            <input type="email" class="modal__form-input" name="email" required="" placeholder="Email">
+                            <span class="modal__form-input-placeholder">
+                                Email
+                            </span>
+                        </label>
+                    </div>
+                    <div class="modal__form-field">
+                        <label class="modal__form-input-label">
+                            <input type="tel" class="modal__form-input js-phone-input" name="phone" required=""
+                                placeholder="Email" data-parsley-phone="">
+                            <span class="modal__form-input-placeholder">
+                                Телефон
+                            </span>
+                        </label>
+                    </div>
+                    <div class="modal__form-field">
+                        <label class="modal__form-input-label">
+                            <textarea name="comment" class="modal__form-input"
+                                placeholder="Задайте свой вопрос"></textarea>
+                            <span class="modal__form-input-placeholder">
+                                Задайте свой вопрос
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <button class="modal__form-submit" type="submit">
+                    отправить
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
