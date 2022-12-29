@@ -158,10 +158,7 @@
     padding: 3rem;
     position: relative;
     flex-grow: 1;
-
-    @include breakpoint(mobile) {
-        padding: 2.4rem;
-    }
+    transition: background-color 0.2s;
     svg {
         position: absolute;
         width: 1.6rem;
@@ -169,6 +166,29 @@
         fill: var(--primary-color);
         right: 2rem;
         top: 2rem;
+        transition: fill 0.2s;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            background: #007c62;
+
+            svg {
+                fill: white;
+            }
+
+            .services__card-text {
+                color: white;
+            }
+
+            .services__card-title {
+                color: white;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding: 2.4rem;
     }
 }
 
@@ -179,7 +199,7 @@
     line-height: 135%;
     margin-bottom: 1.6rem;
     text-decoration: none;
-
+    transition: color 0.2s;
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 600;
@@ -203,6 +223,7 @@
     font-size: 1.4rem;
     line-height: 150%;
     color: #969696;
+    transition: color 0.2s;
 
     @include breakpoint(mobile) {
         font-style: normal;

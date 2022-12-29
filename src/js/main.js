@@ -23,6 +23,7 @@ import gallerySlider from './gallerySlider';
 import servicesMobileNav from './servicesMobileNav';
 import protoSelector from './protoSelector';
 import datepicker from './datepicker';
+import partnersSlider from './partnersSlider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     servicesMobileNav();
     protoSelector();
     datepicker();
+    partnersSlider();
 });
 
 document.addEventListener('lazyloaded', () => {

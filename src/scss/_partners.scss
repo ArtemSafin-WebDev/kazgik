@@ -33,10 +33,119 @@
         border-top: 1px solid #eeeeee;
         border-bottom: 1px solid #eeeeee;
     }
+}
 
+.partners__slider {
     @include breakpoint(mobile) {
         border-top: 1px solid #eeeeee;
-        border-bottom: 1px solid #eeeeee;
+
+        .swiper {
+            margin: 0;
+            margin-right: -1px;
+            width: auto;
+        }
+    }
+}
+
+.partners__arrows-wrapper {
+    @include breakpointMF(small-tablet) {
+        display: none;
+    }
+
+    @include breakpoint(mobile) {
+        order: 10;
+        padding-top: 4rem;
+
+        position: relative;
+
+        &::after {
+            content: '';
+            top: 0;
+            height: 1px;
+            left: 50%;
+            width: 100vw;
+            transform: translateX(-50%);
+            background-color: #eeeeee;
+            position: absolute;
+            pointer-events: none;
+        }
+    }
+}
+
+.partners__arrows {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.partners__arrow {
+    width: 10rem;
+    height: 10rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eeeeee;
+    transition: background-color 0.2s, border-color 0.2s;
+    flex-shrink: 0;
+    background-color: #fff;
+
+    @include breakpoint(mobile) {
+        justify-self: stretch;
+        width: auto;
+        height: auto;
+        &:first-child {
+            border-left: none;
+        }
+        &:last-child {
+            border-right: none;
+        }
+        &::before {
+            content: '';
+            display: block;
+            padding-bottom: 50%;
+        }
+    }
+    &.swiper-button-disabled {
+        cursor: default;
+
+        svg {
+            fill-opacity: 0.5;
+        }
+    }
+
+    &:not(.swiper-button-disabled) {
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--primary-color);
+                border-color: var(--primary-color);
+
+                svg {
+                    fill: white;
+                }
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        margin-left: -1px;
+    }
+    svg {
+        width: 1.8rem;
+        height: 1.8rem;
+        fill: var(--primary-color);
+        transition: fill 0.2s, fill-opacity 0.2s;
+
+        @include breakpoint(mobile) {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 }
 
@@ -51,7 +160,7 @@
     }
 
     @include breakpoint(mobile) {
-        border-bottom: 1px solid #eeeeee;
+        border-right: 1px solid #eeeeee;
         &:last-child {
             border: none;
         }
