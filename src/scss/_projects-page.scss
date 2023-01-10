@@ -1,8 +1,23 @@
 .projects-page {
 }
 
+.project-page__decor {
+    position: absolute;
+    right: calc((100vw - 100% - var(--sb-width, 0)) / 2 * -1);
+    bottom: -1px;
+    height: calc(100% + 3px);
+    width: auto;
+    z-index: -1;
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
 .projects-page__top-row {
     position: relative;
+    z-index: 1;
 
     @include breakpointMF(small-tablet) {
         display: grid;
@@ -82,7 +97,7 @@
     padding: 1.4rem 3.35rem;
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
     position: relative;
-
+    background-color: #fff;
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 400;

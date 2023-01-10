@@ -1,0 +1,93 @@
+.achievements {
+}
+
+.achivements__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.achievements__list-item {
+    @include breakpointMF(small-tablet) {
+        border-bottom: 1px solid #eeeeee;
+        margin-bottom: -1px;
+        display: flex;
+        flex-direction: column;
+        &:not(:nth-child(3n)) {
+            border-right: 1px solid #eeeeee;
+            margin-right: -1px;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        border-top: 1px solid #eeeeee;
+        &:first-child {
+            border: none;
+        }
+
+        .achievements:not(.all-shown) & {
+            &:not(:nth-child(-n + 3)) {
+                display: none;
+            }
+        }
+    }
+}
+
+.achievements__bottom {
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        & > span {
+            min-height: 15rem;
+            display: flex;
+            flex-direction: column;
+            &:not(:first-child) {
+                border-left: 1px solid #eeeeee;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        & > span {
+            display: block;
+            &:nth-child(1) {
+                height: 4rem;
+            }
+
+            &:nth-child(3) {
+                height: 12rem;
+            }
+        }
+    }
+}
+
+.achievements__load-more {
+    @include arrowLink;
+    margin: 10rem -1px;
+    color: var(--orange);
+
+    @include breakpointMF(small-tablet) {
+        display: none;
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
+    &:link,
+    &:visited {
+        color: var(--orange);
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: var(--orange);
+            color: white;
+        }
+    }
+}

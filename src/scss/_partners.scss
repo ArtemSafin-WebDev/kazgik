@@ -168,13 +168,6 @@
 }
 
 .partners__card {
-    position: relative;
-    &::before {
-        content: '';
-        display: block;
-        padding-bottom: 50%;
-    }
-
     @media (hover: hover) {
         &:hover {
             .partners__card-image {
@@ -185,8 +178,13 @@
 }
 
 .partners__card-image-container {
-    position: absolute;
-    inset: 0;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 50%;
+    }
 }
 
 .partners__card-image {
@@ -234,5 +232,45 @@
     @include breakpoint(mobile) {
         display: block;
         height: 8rem;
+    }
+}
+
+.partners__card-content {
+    padding: 2.4rem;
+    padding-top: 2.2rem;
+    padding-bottom: 5rem;
+    border-top: 1px solid #eeeeee;
+}
+
+.partners__card-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 150%;
+    margin-bottom: 0.8rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 135%;
+        margin-bottom: 0.8rem;
+    }
+}
+
+.partners__card-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 150%;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 160%;
     }
 }
