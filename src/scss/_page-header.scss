@@ -187,9 +187,9 @@
     flex-direction: column;
     flex-shrink: 0;
     & > span {
-        height: 1.5px;
+        height: 2px;
         margin-bottom: 5px;
-        width: 2.4rem;
+        width: 24px;
         background-color: var(--primary-color);
         transition: background-color 0.2s, opacity 0.2s, transform 0.2s;
         &:last-child {
@@ -200,13 +200,13 @@
     .mobile-menu-open & {
         & > span {
             &:nth-child(1) {
-                transform: translateY(6.4px) rotate(45deg);
+                transform: translateY(7px) rotate(45deg);
             }
             &:nth-child(2) {
                 opacity: 0;
             }
             &:nth-child(3) {
-                transform: translateY(-6.4px) rotate(-45deg);
+                transform: translateY(-7px) rotate(-45deg);
             }
         }
     }
